@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Wizard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">RW</div>
+
+            <div>
+                <h1>Report Wizard</h1>
+                <span>Inspection System</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a class="nav-item active" href="#report-info">
+                <span class="nav-number">01</span>
+                <span>Report Information</span>
+            </a>
+
+            <a class="nav-item" href="#joint-section">
+                <span class="nav-number">02</span>
+                <span>Joint Inspection</span>
+            </a>
+
+            <a class="nav-item" href="#summary">
+                <span class="nav-number">03</span>
+                <span>Summary</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <div id="statusDot"></div>
+            <span id="statusText">checking...</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">INSPECTION REPORT</p>
+                <h2>Create New Report</h2>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="secondary-btn" id="clearBtn">
+                    Clear
+                </button>
+
+                <button class="primary-btn" id="generateBtn">
+                    <span>Generate Report</span>
+                    <span class="arrow">→</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+
+            <!-- ================= REPORT INFO ================= -->
+
+            <section class="section" id="report-info">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-number">01</span>
+
+                        <div>
+                            <h3>Report Information</h3>
+                            <p>General information about this inspection report.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="report-card">
+
+                    <div class="form-grid">
+
+                        <!--UT REPORT NUMBER -->
+
+                        <div class="field">
+
+                            <label for="utReportNumber">
+                                UT Report Number
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">#</span>
+                                <input type="text" id="utReportNumber" placeholder="Enter UT report number" value="UT-2024-001">
+                            </div>
+
+                        </div>
+
+                        <!-- VT REPORT NUMBER -->
+
+                        <div class="field">
+
+                            <label for="vtReportNumber">
+                                VT Report Number
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">#</span>
+
+                                <input
+                                    type="text"
+                                    id="vtReportNumber"
+                                    placeholder="Enter VT report number"
+                                    value="VT-2024-001"
+                                >
+                            </div>
+
+
+                        </div>
+                        <!-- INSPECTOR -->
+
+                        <div class="field">
+
+                            <label for="utinspector">
+                                UT Inspector
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">◎</span>
+
+                                <select id="utinspector">
+
+                                    <option value="ABDELAZIZ EL ASRI">
+                                        AZZ
+                                    </option>
+
+                                    <option value="YOUNES MAALAGH">
+                                        YMA
+                                    </option>
+
+                                    <option value="KAMAL BARICH">
+                                        KML
+                                    </option>
+
+                                    <option value="YASSINE RAKOUCH">
+                                        YRA
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- INSPECTOR -->
+
+                        <div class="field">
+
+                            <label for="vtinspector">
+                                VT Inspector
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">◎</span>
+
+                                <select id="vtinspector">
+
+                                    <option value="ABDELAZIZ EL ASRI">
+                                        AZZ
+                                    </option>
+
+                                    <option value="YOUNES MAALAGH">
+                                        YMA
+                                    </option>
+
+                                    <option value="KAMAL BARICH">
+                                        KML
+                                    </option>
+
+                                    <option value="YASSINE RAKOUCH">
+                                        YRA
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- DATE -->
+
+                        <div class="field">
+
+                            <label for="reportDate">
+                                Inspection Date
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">◷</span>
+
+                                <input
+                                    type="date"
+                                    id="reportDate"
+                                >
+                            </div>
+
+                        </div>
+
+                        <!-- STAMP -->
+
+                        <div class="field">
+
+                            <label for="stamp">
+                                Stamp
+                            </label>
+
+                            <div class="input-wrapper">
+                                <span class="input-icon">◆</span>
+
+                                <select id="stamp">
+
+
+                                    <option value="MOU">
+                                        MOU
+                                    </option>
+
+                                    <option value="MER">
+                                        MER
+                                    </option>
+
+                                    <option value="ABO">
+                                        ABO
+                                    </option>
+
+                                    <option value="none">
+                                        no stamp
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= JOINTS ================= -->
+
+            <section class="section" id="joint-section">
+
+                <div class="section-heading joint-heading">
+
+                    <div>
+
+                        <div class="heading-left">
+
+                            <span class="section-number">02</span>
+
+                            <div>
+                                <h3>Joint Inspection</h3>
+
+                                <p>
+                                    Enter the inspection results for each scanned joint.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="joint-counter">
+                        <span id="jointCount">7</span>
+                        <small>JOINTS</small>
+                    </div>
+
+                </div>
+
+
+                <!-- JOINT CARDS -->
+
+                <div id="jointsContainer" class="joints-container">
+                    <!-- JavaScript creates joints here -->
+                </div>
+
+
+                <!-- ADD JOINT BTN -->
+
+                <button type="button" id="addJointBtn" class="add-joint-btn" >
+                    <span class="plus">+</span>
+
+                    <span>
+                        <strong>Add Joint</strong>
+                        <small>Add another scanned joint</small>
+                    </span>
+
+                </button>
+
+            </section>
+
+
+            <!-- ================= SUMMARY ================= -->
+
+            <section class="section" id="summary">
+
+                <div class="section-heading">
+
+                    <div class="heading-left">
+
+                        <span class="section-number">03</span>
+
+                        <div>
+                            <h3>Report Summary</h3>
+                            <p>Review the information before generating the report.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-item">
+                        <span>Total Joints</span>
+                        <strong id="summaryJoints">4</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Accepted</span>
+                        <strong id="summaryAccepted">0</strong>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Rejected</span>
+                        <strong id="summaryRejected">0</strong>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- JSON PREVIEW -->
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
